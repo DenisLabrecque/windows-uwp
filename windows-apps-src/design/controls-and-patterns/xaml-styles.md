@@ -141,7 +141,7 @@ A fast way to apply styles to your controls is to right-click on a control on th
 
 ## Lightweight styling
 
-Overriding the system brushes is generally done at the App or Page level, and in either case the color override will affect all controls that reference that brush – and in XAML many controls can reference the same system brush.
+Overriding the system brushes is generally done at the App or Page level, and in either case the color override will affect all controls that reference that brush – in XAML, many controls can reference the same system brush.
 
 ![styled buttons](images/LightweightStyling_ButtonStatesExample.png)
 
@@ -159,9 +159,9 @@ Overriding the system brushes is generally done at the App or Page level, and in
 </Page.Resources>
 ```
 
-For states like PointerOver (mouse is hovered over the button), **PointerPressed** (button has been invoked), or Disabled (button is not interactable). These endings are appended onto the original Lightweight styling names: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etc. Modifying those brushes as well, will make sure that your controls are colored consistently to your app's theme.
+For states like PointerOver (mouse is hovered over the button), **PointerPressed** (button has been invoked), or Disabled (button is not interactable), the following endings are appended to the original Lightweight styling names: **ButtonBackgroundPointerOver**, **ButtonForegroundPointerPressed**, **ButtonBorderBrushDisabled**, etc. Modifying those brushes as well will ensure that your controls are colored consistently to your app's theme.
 
-Placing these brush overrides at the **App.Resources** level, will alter all the buttons within the entire app, instead of on a single page.
+Placing these brush overrides at the **App.Resources** level will alter all the buttons within the entire app, instead of on a single page.
 
 ### Per-control styling
 
@@ -194,11 +194,11 @@ In other cases, changing a single control on one page only to look a certain way
 <CheckBox Content="Normal CheckBox" Margin="5"/>
 ```
 
-This would only effect that one “Special CheckBox” on the page where that control existed.
+This would only affect that one “Special CheckBox” on the page where that control existed.
 
 ## Modify the default system styles
 
-You should use the styles that come from the Windows Runtime default XAML resources when you can. When you have to define your own styles, try to base your styles on the default ones when possible (using based-on styles as explained earlier, or start by editing a copy of the original default style).
+You should use the styles that come from the Windows Runtime default XAML resources when you can. When you must define your own styles, try to base your styles on the defaults when possible (using based-on styles as explained earlier, or start by editing a copy of the original default style).
 
 ## The template property
 
